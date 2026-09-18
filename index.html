@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Rojas Painting — licensed and bonded painting contractor based in North Natomas, serving Sacramento, Natomas, Elk Grove and Roseville. Interior and exterior house painting, cabinets, and stucco. Owner-operated. Free estimates — call (916) 813-0097.">
+<title>Rojas Painting — Sacramento</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,600;0,700;1,400&family=Assistant:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    --paper: #F8F6F1;
+    --paper-deep: #EDE9E0;
+    --walnut: #2B2723;
+    --walnut-deep: #1B1815;
+    --valley: #3F6B3A;
+    --valley-bright: #52864B;
+    --poppy: #D2731F;
+    --ink: #2C2926;
+    --ink-soft: #66625C;
+    --line: #DFD8CB;
+    --card: #FFFEFB;
+    --img-bg: #E5DFD3;
+    --on-dark: #F4F1EA;
+    --on-accent: #FFFEFB;
+    --display: "Bitter", Georgia, serif;
+    --body: "Assistant", "Segoe UI", Arial, sans-serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #1B1917;
+      --paper-deep: #151312;
+      --walnut: #EBE7E1;
+      --walnut-deep: #110F0E;
+      --valley: #6FA167;
+      --valley-bright: #52864B;
+      --poppy: #E08B3C;
+      --ink: #E5E1DB;
+      --ink-soft: #9C958C;
+      --line: #322D28;
+      --card: #221F1C;
+      --img-bg: #2A2622;
+      --on-dark: #F4F1EA;
+      --on-accent: #110F0E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #1B1917;
+    --paper-deep: #151312;
+    --walnut: #EBE7E1;
+    --walnut-deep: #110F0E;
+    --valley: #6FA167;
+    --valley-bright: #52864B;
+    --poppy: #E08B3C;
+    --ink: #E5E1DB;
+    --ink-soft: #9C958C;
+    --line: #322D28;
+    --card: #221F1C;
+    --img-bg: #2A2622;
+    --on-dark: #F4F1EA;
+    --on-accent: #110F0E;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation: none !important; transition: none !important; }
+  }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  a { color: var(--valley); }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--poppy);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+  img, svg { max-width: 100%; display: block; }
+  img.ph { width: 100%; height: 100%; object-fit: cover; background: var(--img-bg); color: var(--ink-soft); }
+
+  .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
+  .eyebrow {
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--poppy);
+    margin: 0 0 0.8rem;
+  }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; color: var(--walnut); text-wrap: balance; margin: 0; }
+  h2 { font-size: clamp(1.7rem, 4.7vw, 2.4rem); line-height: 1.16; }
+  h3 { font-size: 1.18rem; line-height: 1.28; }
+  p { margin: 0; }
+  section { padding: clamp(3.2rem, 7vw, 4.6rem) 0; scroll-margin-top: 5.4rem; }
+  .section-intro { max-width: 46em; margin-top: 1rem; color: var(--ink-soft); }
+
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.85rem 1.7rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .btn-solid { background: var(--valley); color: var(--on-accent); }
+  .btn-solid:hover { background: var(--valley-bright); }
+  .btn-ghost { border: 2px solid currentColor; }
+  @media (max-width: 30rem) { .ctas .btn { flex: 1 1 100%; } }
+
+  /* ---------- Header ---------- */
+  .site-head {
+    position: sticky; top: 0; z-index: 50;
+    background: color-mix(in srgb, var(--paper) 94%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  header.site { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.75rem 0; }
+  .brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: var(--walnut); line-height: 1.1; min-width: 0; }
+  .brand .mark {
+    width: 42px; height: 42px; flex: none;
+    background: var(--valley); color: var(--on-accent);
+    display: grid; place-items: center;
+    font-family: var(--display); font-weight: 700; font-size: 1.22rem;
+    border-radius: 4px;
+  }
+  .brand .name { font-family: var(--display); font-weight: 600; font-size: 1.16rem; white-space: nowrap; }
+  .brand small { display: block; font-family: var(--body); font-weight: 600; font-size: 0.63rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-soft); }
+  nav.top { display: none; gap: 1.2rem; }
+  nav.top a { color: var(--ink); text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+  nav.top a:hover { color: var(--valley); }
+  .call-btn {
+    display: inline-block; background: var(--walnut); color: var(--on-dark);
+    text-decoration: none; font-weight: 700;
+    font-size: 0.94rem; padding: 0.55rem 1.1rem; border-radius: 4px; white-space: nowrap;
+  }
+  .call-btn:hover { background: var(--valley); }
+  :root[data-theme="dark"] .call-btn { background: var(--valley); color: var(--on-accent); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .call-btn { background: var(--valley); color: var(--on-accent); }
+  }
+  @media (max-width: 30rem) {
+    header.site { gap: 0.5rem; }
+    .brand .name { font-size: 0.95rem; }
+    .brand small { font-size: 0.51rem; letter-spacing: 0.07em; white-space: normal; }
+    .brand .mark { width: 33px; height: 33px; font-size: 0.98rem; }
+    .call-btn { font-size: 0.8rem; padding: 0.45rem 0.7rem; }
+  }
+  @media (min-width: 62rem) { nav.top { display: flex; } }
+
+  /* ---------- Hero ---------- */
+  .hero { position: relative; color: var(--on-dark); isolation: isolate; display: grid; }
+  .hero-inner { grid-area: 1 / 1; }
+  .hero .bg { position: absolute; inset: 0; overflow: hidden; }
+  .hero .bg img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+  .hero .bg::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(200deg, rgba(18,16,14,0.52) 0%, rgba(18,16,14,0.84) 62%, rgba(18,16,14,0.93) 100%);
+    z-index: 1;
+  }
+  .hero-inner { position: relative; z-index: 2; padding: clamp(4rem, 12vw, 7rem) 1.25rem clamp(3rem, 8vw, 4.5rem); max-width: 72rem; margin: 0 auto; width: 100%; }
+  .hero .eyebrow { color: #F0A85E; }
+  .hero h1 { color: #FFFEFB; font-size: clamp(2.1rem, 6.3vw, 3.4rem); line-height: 1.12; max-width: 14em; }
+  .hero h1 em { font-style: normal; color: #9CC993; }
+  .hero .lede { max-width: 38em; margin-top: 1.1rem; font-size: 1.1rem; color: #D5D2CB; }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: #FFFFFF14; border: 1px solid #FFFFFF2E;
+    border-radius: 999px; padding: 0.32rem 0.9rem;
+    font-size: 0.85rem; font-weight: 600; color: #E9E6E0;
+  }
+  .ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.7rem; }
+  .ctas .btn-ghost { color: var(--on-dark); }
+  .hero-note { margin-top: 1.3rem; font-size: 0.92rem; color: #9C958C; }
+
+  /* ---------- Strip ---------- */
+  .strip { background: var(--walnut-deep); color: var(--on-dark); padding: 1.4rem 0; }
+  .strip-row { display: flex; flex-wrap: wrap; gap: 0.6rem 2.4rem; justify-content: center; text-align: center; }
+  .strip-row span { font-size: 0.96rem; }
+  .strip-row b { color: #9CC993; }
+
+  /* ---------- Services ---------- */
+  .svc-grid { display: grid; gap: 1.3rem; margin-top: 2.2rem; grid-template-columns: 1fr; }
+  @media (min-width: 44rem) { .svc-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 64rem) { .svc-grid { grid-template-columns: repeat(4, 1fr); } }
+  .svc {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 8px; overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .svc .photo { aspect-ratio: 4 / 3; overflow: hidden; }
+  .svc .body { padding: 1.25rem 1.25rem 1.45rem; display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+  .svc h3 { font-size: 1.16rem; }
+  .svc p { color: var(--ink-soft); font-size: 0.95rem; flex: 1; }
+
+  /* ---------- Local / collision ---------- */
+  .local { background: var(--walnut-deep); color: var(--on-dark); }
+  .local h2 { color: var(--on-dark); }
+  .local-split { display: grid; gap: 2.2rem; align-items: center; grid-template-columns: 1fr; }
+  @media (min-width: 56rem) { .local-split { grid-template-columns: 1.05fr 0.95fr; } }
+  .local-copy h2 + p { margin-top: 1.1rem; }
+  .local-copy p { color: #A9A49C; }
+  .local-copy p + p { margin-top: 1rem; }
+  .local-photo { aspect-ratio: 4 / 3; overflow: hidden; border-radius: 8px; }
+  .callout-dark {
+    margin-top: 1.4rem;
+    border-left: 4px solid var(--poppy);
+    background: #FFFFFF0A;
+    border-radius: 0 6px 6px 0;
+    padding: 1.1rem 1.25rem;
+    color: #DCD8D1; font-size: 1rem;
+  }
+  .callout-dark b { color: #F0A85E; }
+
+  /* ---------- Process ---------- */
+  .process { background: var(--paper-deep); }
+  .proc-grid { display: grid; gap: 1.2rem; margin-top: 2.2rem; grid-template-columns: 1fr; }
+  @media (min-width: 44rem) { .proc-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 64rem) { .proc-grid { grid-template-columns: repeat(4, 1fr); } }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 1.5rem 1.4rem; }
+  .step .n {
+    display: inline-grid; place-items: center;
+    width: 40px; height: 40px; border-radius: 4px;
+    background: var(--valley); color: var(--on-accent);
+    font-family: var(--display); font-weight: 700; font-size: 1.1rem;
+  }
+  .step h3 { margin-top: 0.7rem; font-size: 1.08rem; }
+  .step p { margin-top: 0.45rem; color: var(--ink-soft); font-size: 0.94rem; }
+
+  /* ---------- Why ---------- */
+  .why-split { display: grid; gap: 2.2rem; align-items: center; grid-template-columns: 1fr; }
+  @media (min-width: 56rem) { .why-split { grid-template-columns: 0.95fr 1.05fr; } }
+  .why-photo { aspect-ratio: 3 / 4; overflow: hidden; border-radius: 8px; max-height: 470px; }
+  .why-copy h2 + p { margin-top: 1.1rem; }
+  .why-copy p { color: var(--ink-soft); }
+  .why-copy p + p { margin-top: 1rem; }
+  .w-list { list-style: none; margin: 1.4rem 0 0; padding: 0; display: grid; gap: 0.7rem; }
+  .w-list li { display: flex; gap: 0.7rem; align-items: flex-start; color: var(--ink); font-size: 0.97rem; }
+  .w-list .chk { flex: none; width: 20px; height: 20px; margin-top: 0.22rem; color: var(--valley); }
+
+  /* ---------- Gallery ---------- */
+  .work { background: var(--paper-deep); }
+  .gal-grid { display: grid; gap: 0.95rem; margin-top: 2.2rem; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 48rem) { .gal-grid { grid-template-columns: repeat(3, 1fr); } }
+  .gal-grid figure { margin: 0; }
+  .gal-grid .shot { aspect-ratio: 4 / 3; overflow: hidden; border-radius: 8px; }
+  .gal-grid figcaption { margin-top: 0.45rem; font-size: 0.85rem; color: var(--ink-soft); }
+
+  /* ---------- Areas ---------- */
+  .areas-inner { text-align: center; }
+  .town-chips { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.5rem; justify-content: center; }
+  .town-chips span {
+    font-weight: 600; font-size: 0.88rem;
+    border: 1px solid var(--line); background: var(--card);
+    border-radius: 999px; padding: 0.32rem 0.95rem; color: var(--ink-soft);
+  }
+  .town-chips span.primary { background: var(--valley); color: var(--on-accent); border-color: var(--valley); }
+
+  /* ---------- Estimate ---------- */
+  .estimate { background: var(--paper-deep); text-align: center; }
+  .est-card {
+    max-width: 44rem; margin: 2rem auto 0;
+    background: var(--card); border: 1px solid var(--line);
+    border-top: 4px solid var(--poppy);
+    border-radius: 10px; padding: 2rem 1.6rem;
+  }
+  .est-card .big { font-family: var(--display); font-weight: 700; font-size: clamp(1.6rem, 5.2vw, 2.2rem); color: var(--walnut); }
+  .est-card p { margin-top: 0.8rem; color: var(--ink-soft); }
+  .est-card .ctas { justify-content: center; margin-top: 1.4rem; }
+
+  /* ---------- Contact ---------- */
+  .contact-band { position: relative; color: var(--on-dark); text-align: center; isolation: isolate; display: grid; }
+  .contact-band .inner { grid-area: 1 / 1; }
+  .contact-band .bg { position: absolute; inset: 0; overflow: hidden; }
+  .contact-band .bg img { width: 100%; height: 100%; object-fit: cover; }
+  .contact-band .bg::after { content: ""; position: absolute; inset: 0; background: rgba(18,16,14,0.88); z-index: 1; }
+  .contact-band .inner { position: relative; z-index: 2; padding: clamp(3.5rem, 9vw, 5.5rem) 1.25rem; max-width: 72rem; margin: 0 auto; width: 100%; }
+  .contact-band .eyebrow { color: #F0A85E; }
+  .contact-band h2 { color: #FFFEFB; }
+  .contact-band .section-intro { color: #BEB9B2; margin-inline: auto; }
+  .contact-band .ctas { justify-content: center; }
+  .contact-band .big-phone {
+    display: inline-block; font-family: var(--display); font-weight: 700;
+    font-size: clamp(2rem, 8vw, 3rem); color: #FFFEFB;
+    text-decoration: none; margin-top: 1rem; line-height: 1.1;
+  }
+  .contact-band .big-phone:hover { color: #9CC993; }
+  .contact-band .fine { margin-top: 1.2rem; font-size: 0.94rem; color: #9C958C; }
+
+  /* ---------- Footer ---------- */
+  footer.site { background: var(--paper-deep); border-top: 1px solid var(--line); color: var(--ink-soft); padding: 2.5rem 0; text-align: center; font-size: 0.92rem; }
+  footer.site .fbrand { font-family: var(--display); font-weight: 600; font-size: 1.3rem; color: var(--walnut); margin-bottom: 0.4rem; }
+  footer.site p { margin-top: 0.3rem; }
+  footer.site a { color: inherit; }
+  footer.site .fine { font-size: 0.78rem; max-width: 54em; margin: 0.9rem auto 0; }
+</style>
+</head>
+<body>
+
+<div class="site-head">
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="#top" aria-label="Rojas Painting home">
+        <span class="mark" aria-hidden="true">R</span>
+        <span class="name">Rojas Painting<small>Sacramento &middot; Natomas</small></span>
+      </a>
+      <nav class="top" aria-label="Sections">
+        <a href="#services">Services</a>
+        <a href="#local">Local</a>
+        <a href="#process">How it works</a>
+        <a href="#why">Why us</a>
+        <a href="#work">The work</a>
+        <a href="#areas">Areas</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="call-btn" href="tel:+19168130097">(916) 813-0097</a>
+    </header>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ================= 1. HERO ================= -->
+  <section class="hero">
+    <div class="bg">
+      <img src="img/hero-exterior-prep.jpg" alt="Painter masking off a window while prepping a house exterior under blue sky" loading="eager">
+    </div>
+    <div class="hero-inner">
+      <p class="eyebrow">Painting Contractor &middot; North Natomas, Sacramento</p>
+      <div class="badge-row">
+        <span class="badge">Licensed &amp; bonded</span>
+        <span class="badge">Owner-operated</span>
+        <span class="badge">Free estimates</span>
+      </div>
+      <h1>Your Sacramento painter — <em>not the one from out of town.</em></h1>
+      <p class="lede">Rojas Painting is an owner-operated painting contractor based in North Natomas, serving Sacramento, Natomas, Elk Grove and Roseville. Interiors, exteriors, cabinets, and stucco — quoted and painted by the same person, start to finish.</p>
+      <div class="ctas">
+        <a class="btn btn-solid" href="tel:+19168130097">Call (916) 813-0097</a>
+        <a class="btn btn-ghost" href="#estimate">Get a free estimate</a>
+      </div>
+      <p class="hero-note">Based in North Natomas &middot; Serving the greater Sacramento area</p>
+    </div>
+  </section>
+
+  <!-- ================= TRUST STRIP ================= -->
+  <div class="strip" role="note" aria-label="Key facts">
+    <div class="wrap strip-row">
+      <span><b>Licensed</b> California contractor</span>
+      <span><b>Bonded</b> &amp; insured</span>
+      <span><b>Owner</b> on every job</span>
+      <span><b>Free</b> written estimates</span>
+    </div>
+  </div>
+
+  <!-- ================= 2. SERVICES ================= -->
+  <section id="services">
+    <div class="wrap">
+      <p class="eyebrow">What we paint</p>
+      <h2>Interiors, exteriors, and the details between.</h2>
+      <p class="section-intro">Residential painting for houses, condos, and rentals across the Sacramento area — a single room or the whole exterior.</p>
+      <div class="svc-grid">
+        <div class="svc">
+          <div class="photo"><img class="ph" src="img/interior-rolling.jpg" alt="Painter rolling fresh color onto an interior wall" loading="lazy"></div>
+          <div class="body">
+            <h3>Interior painting</h3>
+            <p>Walls, ceilings, doors, baseboards, and trim. Everything covered and protected, lines cut clean, and the room put back together before we leave.</p>
+          </div>
+        </div>
+        <div class="svc">
+          <div class="photo"><img class="ph" src="img/ladder-exterior.jpg" alt="Painter on a ladder coating the exterior of a house" loading="lazy"></div>
+          <div class="body">
+            <h3>Exterior &amp; stucco</h3>
+            <p>Siding, stucco, fascia, and eaves — washed, patched, primed, and coated with paint that stands up to Valley summers.</p>
+          </div>
+        </div>
+        <div class="svc">
+          <div class="photo"><img class="ph" src="img/kitchen-gray.jpg" alt="Kitchen with freshly painted gray cabinetry" loading="lazy"></div>
+          <div class="body">
+            <h3>Cabinets &amp; built-ins</h3>
+            <p>Kitchen and bath cabinets refinished to a smooth, durable finish — a fraction of what replacing them costs.</p>
+          </div>
+        </div>
+        <div class="svc">
+          <div class="photo"><img class="ph" src="img/empty-room.jpg" alt="Empty room with crisp white walls ready for move-in" loading="lazy"></div>
+          <div class="body">
+            <h3>Rentals &amp; move-outs</h3>
+            <p>Turnovers painted on a schedule that works for landlords and property managers — fast, clean, and ready to list.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 3. LOCAL / NAME COLLISION ================= -->
+  <section id="local" class="local">
+    <div class="wrap local-split">
+      <div class="local-copy">
+        <p class="eyebrow" style="color:#F0A85E">Local to Sacramento</p>
+        <h2>There are a few Rojas Paintings. This is the Sacramento one.</h2>
+        <p>Search the name and you'll turn up painting companies in Rohnert Park, Napa, and Hayward. Good companies — but they're in the Bay Area and the North Bay, two hours from your driveway.</p>
+        <p>We're based on a street in North Natomas, and the work happens between Natomas, Elk Grove, and Roseville. When you call this number, you get the painter who actually lives here.</p>
+        <div class="callout-dark">
+          <b>One number, one painter.</b> No call center, no dispatcher, no crew you've never met showing up on the morning of.
+        </div>
+      </div>
+      <div class="local-photo">
+        <img class="ph" src="img/two-story-home.jpg" alt="Two-story suburban home with painted siding and trim" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 4. PROCESS ================= -->
+  <section id="process" class="process">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Four steps, and you know the price before step three.</h2>
+      <p class="section-intro">No pressure, no upselling, and no number that changes once the work has started.</p>
+      <div class="proc-grid">
+        <div class="step">
+          <div class="n">1</div>
+          <h3>Look at the job</h3>
+          <p>We come out, walk the space with you, and measure it ourselves rather than guessing from photos.</p>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <h3>Written estimate</h3>
+          <p>An itemized quote covering surfaces, prep, number of coats, and materials. Free, with nothing to sign.</p>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <h3>Prep properly</h3>
+          <p>Masking, patching, sanding, caulking, priming. This is the part that decides whether it still looks good in ten years.</p>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <h3>Paint &amp; walk through</h3>
+          <p>Full coats applied, the site cleaned up, and a walk-through together before the job is called done.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 5. WHY US ================= -->
+  <section id="why">
+    <div class="wrap why-split">
+      <div class="why-photo">
+        <img class="ph" src="img/cabinets-blue.jpg" alt="Kitchen with carefully painted blue-gray cabinets and trim" loading="lazy">
+      </div>
+      <div class="why-copy">
+        <p class="eyebrow">Why Rojas Painting</p>
+        <h2>Small shop, careful work.</h2>
+        <p>A lot of painting companies send a salesperson to quote your job and a rotating crew to do it. Here the person who prices the work is the person who paints it — so what you agreed to is what gets done.</p>
+        <p>Being an owner-operated shop means small jobs are worth our time: one bedroom, a front door, a stair rail, a rental turnover. And it means our name is on every surface we touch.</p>
+        <ul class="w-list">
+          <li><svg class="chk" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Licensed California painting contractor</li>
+          <li><svg class="chk" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Contractor bond in place</li>
+          <li><svg class="chk" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>One point of contact from quote to cleanup</li>
+          <li><svg class="chk" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10.5l4 4 8-9"/></svg>Small jobs and single rooms welcome</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 6. THE WORK ================= -->
+  <section id="work" class="work">
+    <div class="wrap">
+      <p class="eyebrow">The work</p>
+      <h2>Prep is most of the job.</h2>
+      <p class="section-intro">Anyone can put a coat of paint on a wall. What separates a finish that lasts from one that peels in two summers is everything that happens first.</p>
+      <div class="gal-grid">
+        <figure>
+          <div class="shot"><img class="ph" src="img/hero-exterior-prep.jpg" alt="Masking and prep work on a house exterior before painting" loading="lazy"></div>
+          <figcaption>Masked and prepped before a drop of paint</figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img class="ph" src="img/two-story-home.jpg" alt="Two-story home exterior with clean painted trim" loading="lazy"></div>
+          <figcaption>Full exteriors, trim included</figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img class="ph" src="img/kitchen-gray.jpg" alt="Gray painted kitchen cabinets with white counters" loading="lazy"></div>
+          <figcaption>Cabinets refinished, not replaced</figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img class="ph" src="img/fireplace-brick.jpg" alt="White painted brick fireplace against a gray wall" loading="lazy"></div>
+          <figcaption>Brick and masonry, painted clean</figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img class="ph" src="img/empty-room.jpg" alt="Empty room with fresh white walls" loading="lazy"></div>
+          <figcaption>Turnovers ready to list</figcaption>
+        </figure>
+        <figure>
+          <div class="shot"><img class="ph" src="img/ladder-exterior.jpg" alt="Painter working from a ladder on an exterior wall" loading="lazy"></div>
+          <figcaption>High walls and hard access</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 7. AREAS ================= -->
+  <section id="areas">
+    <div class="wrap areas-inner">
+      <p class="eyebrow">Areas served</p>
+      <h2>Sacramento, Natomas, Elk Grove and Roseville.</h2>
+      <p class="section-intro" style="margin-inline:auto">Based in North Natomas and working across the greater Sacramento area — from the newer tracts off Del Paso and East Commerce out to Elk Grove and up through Roseville.</p>
+      <div class="town-chips" aria-label="Areas served">
+        <span class="primary">Sacramento</span>
+        <span class="primary">Natomas</span>
+        <span class="primary">Elk Grove</span>
+        <span class="primary">Roseville</span>
+        <span>North Highlands</span><span>Citrus Heights</span><span>Rocklin</span><span>West Sacramento</span>
+      </div>
+      <p class="section-intro" style="margin-inline:auto; margin-top:1.4rem">Not sure whether you're in range? Give us a call — if it's a drive we can't make work, we'll tell you straight.</p>
+    </div>
+  </section>
+
+  <!-- ================= 8. FREE ESTIMATE ================= -->
+  <section id="estimate" class="estimate">
+    <div class="wrap">
+      <p class="eyebrow">No cost, no pressure</p>
+      <h2>Find out what your project costs.</h2>
+      <div class="est-card">
+        <div class="big">Free written estimates</div>
+        <p>Tell us the rooms, the square footage, or just send a photo of what you're looking at. We'll come see the real condition of the surfaces and put a clear number in writing — with no obligation to book.</p>
+        <div class="ctas">
+          <a class="btn btn-solid" href="tel:+19168130097">Call for your estimate</a>
+          <a class="btn btn-ghost" style="color:var(--walnut)" href="sms:+19168130097">Text us a photo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 9. CONTACT ================= -->
+  <section id="contact" class="contact-band">
+    <div class="bg">
+      <img src="img/two-story-home.jpg" alt="Painted suburban home exterior" loading="lazy">
+    </div>
+    <div class="inner">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let's talk about your project.</h2>
+      <p class="section-intro">One room, a whole interior, or the outside of the house — call or text and we'll get you a price.</p>
+      <a class="big-phone" href="tel:+19168130097">(916) 813-0097</a>
+      <div class="ctas" style="margin-top:1.3rem">
+        <a class="btn btn-solid" href="tel:+19168130097">Call now</a>
+        <a class="btn btn-ghost" href="sms:+19168130097">Send a text</a>
+      </div>
+      <p class="fine">North Natomas, Sacramento &middot; Serving Sacramento, Natomas, Elk Grove &amp; Roseville</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fbrand">Rojas Painting</div>
+    <p>Interior &amp; exterior painting &middot; Sacramento, Natomas, Elk Grove &amp; Roseville</p>
+    <p><a href="tel:+19168130097">(916) 813-0097</a></p>
+    <p class="fine">Licensed California painting contractor, bonded. Based in North Natomas, Sacramento — not affiliated with Rojas Painting Inc of Rohnert Park or any other similarly named company. Photographs are representative of residential painting work, via Unsplash, not photographs of specific completed projects. Scope, color, and pricing confirmed in a free written estimate before any work begins.</p>
+  </div>
+</footer>
+
+</body>
+</html>
